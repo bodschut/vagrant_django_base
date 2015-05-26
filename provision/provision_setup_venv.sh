@@ -8,7 +8,7 @@ printf "*** setup virtual python environment ***"
 export WORKON_HOME=/vagrant/.virtualenvs
 export PROJECT_HOME=/vagrant
 source /usr/local/bin/virtualenvwrapper.sh
-mkvirtualenv $1_env
+mkvirtualenv $1_env --always-copy
 setvirtualenvproject $VIRTUAL_ENV /vagrant
 
 printf "*** Installing python packages ***\n"
